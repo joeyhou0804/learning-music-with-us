@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'results.js') }}"></script>
+    <script>
+        correct = {{correct}}
+    </script>
+    <div class="app-container" id="homepageBackground">
+        <div class="title">
+            <h1>You got {{correct}} question(s) right.</h1>
+            <br>
+            Thanks for learning with us, and keep learning music!
+        </div>
+        <br>
+        <div style="text-align:right;">
+            <button type="button" class="btn btn-primary" id="gohome" href="/home">Homepage</button>
+            <button type="button" class="btn btn-primary" id="goquiz" href="/quiz">Quiz Again</button>
+        </div>
+    </div>
+{% endblock %}
